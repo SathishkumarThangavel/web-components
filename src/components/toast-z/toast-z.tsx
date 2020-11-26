@@ -103,6 +103,7 @@ export class ToastZ {
           <span
             class="close-icon"
             innerHTML={this.closeSvg}
+            onClick={()=>this.closeToast()}
           ></span>
         </div>
       </Host>

@@ -7,8 +7,43 @@
 
     <script type="module" src="/build/web-components.esm.js"></script>
     <script nomodule src="/build/web-components.js"></script>
+    <style>
+      button {
+        padding: 10px 25px;
+        margin: 50px 10px;
+        background: blueviolet;
+        Color: #fff;
+        border: none;
+      }
+      section {
+        text-align: center;
+        margin-top: 10%;
+      }
+      .usage {
+        max-width: 350px;
+        margin: auto;
+        border: 1px solid #fddbdb;
+        padding: 10px 20px;
+      }
+    </style>
   </head>
   <body>
     <toast-z></toast-z>
+    <section>
+      <h2>Toast Web Componet</h2>
+      <button onclick="document.querySelector('toast-z').trigger({content: 'SuccessFully Saved!', type:'success'})">Success</button>
+      <button onclick="document.querySelector('toast-z').trigger({content: 'SuccessFully Saved!', type:'error'})">Error</button>
+      <button onclick="document.querySelector('toast-z').trigger({content: 'SuccessFully Saved!', type:'info'})">Info</button>
+      <button onclick="document.querySelector('toast-z').trigger({content: 'SuccessFully Saved!', type: 'warning'})">Warning</button>
+    </section>
+    <div class="usage">
+      <h4>Usage</h4>
+      <code>
+      <div style="margin-bottom: 10px;">&lt;toast-z&gt;&lt;/toast-z&gt;</div>
+      document.querySelector('toast-z').trigger({
+        <div style="margin-left: 10px;">content: 'SuccessFully Saved!',</div>
+      })
+      </div></code>
+    </div>
   </body>
 </html>
