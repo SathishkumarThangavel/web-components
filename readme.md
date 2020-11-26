@@ -7,10 +7,12 @@ Web components can be directly used inside your html code, something like <html>
 Import the built js file and start using the components directly adding in your html file.
 web components in this repo
 - toast-z
+
 you can use like below
+
 <code>
 &lt;toast-z&gt; &lt;/toast-z&gt;
 </code>
 <br><br>
 
-![Demo](https://sathish.xyz)
+![Demo](https://web-components-kappa.vercel.app/)
