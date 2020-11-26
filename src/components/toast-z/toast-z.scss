@@ -1,0 +1,108 @@
+:host {
+  display: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+:host(.is-open) {
+  display: block;
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
+  z-index: 999;
+}
+
+:host(.toast) {
+  position: fixed;
+  top: 10px;
+  width: 400px;
+  padding: 10px;
+  border: 1px solid #ebeff3;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.toast {
+  :host(&.success) {
+    background: linear-gradient(to right, #b6f7b6, #25bb25);
+  }
+
+  :host(&.error) {
+    background: linear-gradient(to right, #fddcdf, #fb4d68);
+  }
+
+  :host(&.warning) {
+    background: linear-gradient(to right, #e8e8c6, #ffe603);
+  }
+
+  :host(&.info) {
+    background: linear-gradient(to right, #e9eaff, #2C7EFD);
+  }
+
+  :host(&.top-center) {
+    left: calc(50% - 200px);
+  }
+
+  :host(&.top-left) {
+    left: 10px;
+  }
+
+  :host(&.top-right) {
+    right: 10px;
+  }
+}
+
+.content {
+  color: #12344d;
+  line-height: 20px;
+  width: 83%;
+  float: left;
+  margin: 2px auto 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.icon {
+  width: 20px;
+  margin: 3px 16px 0 6px;
+  vertical-align: text-top;
+  float: left;
+}
+.close-icon {
+  width: 12px;
+  float: right;
+  cursor: pointer;
+  margin-right: 6px;
+  margin-top: 4px;
+  fill: #5f5d5d;
+}
+
+.action-link {
+  color: #2c5cc5;
+  line-height: 14px;
+  margin-left: 38px;
+  cursor: pointer;
+  float: left;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@keyframes fadeOut {
+  100% {
+    top: -600px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    top: -600px;
+  }
+
+  100% {
+    top: 10px;
+  }
+}
+
+:host(.fade-out) {
+  animation-duration: 1s;
+  animation-name: fadeOut;
+}
