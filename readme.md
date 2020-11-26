@@ -15,4 +15,4 @@ you can use like below
 </code>
 <br><br>
 
-![Demo](https://web-components-kappa.vercel.app/)
+[Demo](https://web-components-kappa.vercel.app/)
